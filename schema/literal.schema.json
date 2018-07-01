@@ -1,0 +1,8 @@
+{
+  "type": "object",
+  "properties": {
+    "type": {},
+    "raw": { "type": "string" }
+  },
+  "required": ["raw"]
+}

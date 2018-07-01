@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+
+  "definitions": {
+    "literal": {
+      "properties": {
+        "$ref": "literal.schema.json"}
+    },
+    "identifier": {
+      "$ref": "identifier.schema.json"
+    }
+  },
+
+  "type": "object",
+  "oneOf": [
+    {
+      "allOf": [
+        {
+          "properties": {
+            "type": {
+              "enum": ["Literal"]
+            }
+          }
+        },
+        {"$ref": "#/definitions/literal"}
+      ]
+    },
+    {
+      "allOf": [
+        {
+          "properties": {
+            "type": {
+              "enum": ["Identifier"]
+            }
+          }
+        },
+        {"$ref": "#/definitions/identifier" }
+      ]
+    }
+  ],
+  "required": ["type"]
+}
