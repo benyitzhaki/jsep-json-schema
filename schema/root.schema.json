@@ -4,7 +4,8 @@
   "definitions": {
     "literal": {
       "properties": {
-        "$ref": "literal.schema.json"}
+        "$ref": "literal.schema.json"
+      }
     },
     "identifier": {
       "$ref": "identifier.schema.json"
